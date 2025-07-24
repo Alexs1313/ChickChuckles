@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Nunito-ExtraBold.ttf",
+      "sha1": "350a651693803cf369b05732920d119fdf557d6f"
+    },
+    {
+      "path": "src/assets/fonts/Nunito-Regular.ttf",
+      "sha1": "1061e4e1867b95fa1353d449970e3dcb23da5f40"
+    },
+    {
+      "path": "src/assets/fonts/RubikBubbles-Regular.ttf",
+      "sha1": "3ed44df9642eb519e942aa9dfb808451c4a39d5b"
+    },
+    {
+      "path": "src/assets/fonts/RubikMonoOne-Regular.ttf",
+      "sha1": "494e30805dc070dfa19c14f69db2dc887ed12556"
+    },
+    {
+      "path": "src/assets/fonts/RubikOne-Regular.ttf",
+      "sha1": "5aba953b9a55010a8fa68e82c8d4e1cddc239c93"
+    },
+    {
+      "path": "src/assets/fonts/RubikSprayPaint-Regular.ttf",
+      "sha1": "e29a554ac9cdde6dddd8e6605edeb819125231ae"
+    }
+  ]
+}
