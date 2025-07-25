@@ -116,12 +116,14 @@ ${stories[randomIndex].story}`,
           </GradientContainer>
           {showJokes ? (
             <View style={{ width: '100%' }}>
-              <Video
-                source={require('../../assets/videos/rooster.mp4')}
-                style={styles.video}
-                resizeMode="cover"
-                ref={videoRef}
-              />
+              <View style={styles.videoWrap}>
+                <Video
+                  source={require('../../assets/videos/rooster.mp4')}
+                  style={styles.video}
+                  resizeMode="cover"
+                  ref={videoRef}
+                />
+              </View>
               <View style={{ paddingHorizontal: 20 }}>
                 <GradientContainer borderStyles={{ top: -60 }}>
                   <View style={styles.jokeContainer}>
@@ -150,7 +152,7 @@ ${stories[randomIndex].story}`,
               <Text style={styles.subtitle}>
                 Tap below to get the daily joke-store
               </Text>
-              <View style={{ width: '75%', marginTop: 21 }}>
+              <View style={{ width: '80%', marginTop: 21 }}>
                 <GragientButton
                   isDisabled={!isAvailable}
                   colors={
@@ -177,12 +179,18 @@ const styles = StyleSheet.create({
     paddingTop: height * 0.07,
     alignItems: 'center',
     padding: 32,
-    paddingBottom: height * 0.12,
+    paddingBottom: height * 0.14,
+  },
+  videoWrap: {
+    overflow: 'hidden',
+    borderRadius: 14,
+    width: '100%',
+    height: height * 0.42,
+    marginTop: 20,
   },
   video: {
     width: '100%',
-    height: 380,
-    marginTop: 20,
+    height: '100%',
   },
   subtitle: {
     fontFamily: 'Nunito-ExtraBold',

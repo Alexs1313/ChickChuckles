@@ -49,7 +49,7 @@ const Categories = () => {
       getFavoritesJokes();
 
       return () => {
-        setShowJokes(false), setSelectedCategory('');
+        setShowJokes(false), setSelectedCategory(''), setCurrentJokeIdx(0);
       };
     }, []),
   );
@@ -104,12 +104,14 @@ const Categories = () => {
         <View style={styles.container}>
           {showJokes ? (
             <View style={{ width: '100%' }}>
-              <Video
-                source={require('../../assets/videos/rooster.mp4')}
-                style={styles.video}
-                resizeMode="cover"
-                ref={videoRef}
-              />
+              <View style={styles.videoWrap}>
+                <Video
+                  source={require('../../assets/videos/rooster.mp4')}
+                  style={styles.video}
+                  resizeMode="cover"
+                  ref={videoRef}
+                />
+              </View>
               <View style={{ paddingHorizontal: 20 }}>
                 <GradientContainer>
                   <View style={styles.jokeContainer}>
@@ -161,7 +163,7 @@ const Categories = () => {
               <Image
                 source={require('../../assets/images/categoriesLogo.png')}
               />
-              <View style={{ width: '75%', gap: 8 }}>
+              <View style={{ width: '80%', gap: 8 }}>
                 {categories.map((category, idx) => (
                   <View key={idx}>
                     <TransparentButton
@@ -177,7 +179,7 @@ const Categories = () => {
                   </View>
                 ))}
               </View>
-              <View style={{ width: '75%', marginTop: 21 }}>
+              <View style={{ width: '80%', marginTop: 21 }}>
                 <GragientButton
                   colors={['#F5AB01', '#E97F01']}
                   isDisabled={!selectedCategory}
@@ -202,10 +204,16 @@ const styles = StyleSheet.create({
     padding: 32,
     paddingBottom: height * 0.14,
   },
+  videoWrap: {
+    overflow: 'hidden',
+    borderRadius: 14,
+    width: '100%',
+    height: height * 0.42,
+    marginBottom: 10,
+  },
   video: {
     width: '100%',
-    height: 380,
-    marginBottom: 20,
+    height: '100%',
   },
   joke: {
     fontFamily: 'Nunito-ExtraBold',
